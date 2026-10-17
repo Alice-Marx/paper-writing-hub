@@ -24,6 +24,8 @@ cp "$HERE"/references/*.md "$TARGET/references/"
 
 for key in "${!SOURCES[@]}"; do
   dest="$TARGET/references/$key"
+  # a placeholder dir (only README.md) is replaced by the real clone
+  if [ -d "$dest" ] && [ -z "$(ls -A "$dest" | grep -v '^README.md$')" ]; then rm -rf "$dest"; fi
   if [ -d "$dest" ]; then echo "[skip] $key"; continue; fi
   echo "[clone] $key"
   git clone --depth 1 "${SOURCES[$key]}" "$dest"

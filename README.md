@@ -51,6 +51,8 @@ npm install -g paper-writing-hub
 paper-writing-hub            # 同 npx，参数一致
 ```
 
+> 说明：仓库与 npm 包的 `references/` 下，8 个技能目录是**占位链接页**（各含一个指向上游仓库的 README）。运行安装器后，这些目录会被替换为对应上游项目的全量副本。
+
 ### 方式三：git clone
 
 ```bash

@@ -8,7 +8,7 @@ license: MIT
 
 一个 skill 聚合 **8 个开源学术技能项目**：统一安装（`npx paper-writing-hub`）、统一路由（按任务选技能集）、统一原生暴露（Claude Code 31 个 / Codex 27 个 junction 技能）。适合任何能读文件 + 跑 shell 的 coding agent（Claude Code、Codex、ZCode、Cursor、DSH 等）。
 
-路径约定：`<skill>` = 本 SKILL.md 所在目录（默认 `~/.agents/skills/paper-writing-hub`）；8 份上游副本在 `<skill>/references/<副本名>/`（由安装器克隆，全量工作树、不裁剪）。
+路径约定：`<skill>` = 本 SKILL.md 所在目录（默认 `~/.agents/skills/paper-writing-hub`）；8 份上游副本在 `<skill>/references/<副本名>/`（由安装器克隆，全量工作树、不裁剪；仓库/包内同位置是**占位链接页**——一个指向上游仓库的 README，安装器会自动替换为全量副本）。
 
 ## 安装 / 更新 / 卸载
 

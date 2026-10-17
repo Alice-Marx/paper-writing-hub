@@ -181,6 +181,11 @@ function main() {
   if (!noUpstreams) {
     for (const key of sel) {
       const dest = path.join(refDst, key);
+      if (fs.existsSync(dest)) {
+        // a placeholder dir (only README.md) is replaced by the real clone
+        const real = fs.readdirSync(dest).filter((f) => f !== 'README.md');
+        if (real.length === 0) fs.rmSync(dest, { recursive: true, force: true });
+      }
       if (fs.existsSync(dest)) { log(`[skip] ${key} already present`); continue; }
       log(`[clone] ${key} from ${SOURCES[key]} (depth 1)...`);
       if (!gitClone(SOURCES[key], dest)) {
