@@ -1,6 +1,6 @@
 {
   "name": "paper-writing-hub",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "One command installs 8 open-source academic paper-writing skill collections and exposes selected skills natively to Claude Code & Codex (writing, polishing, peer review, rebuttal, literature review, citation verification, thesis PPT, scientific computing).",
   "type": "module",
   "bin": {
