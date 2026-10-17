@@ -59,7 +59,7 @@ Claude Code 技能目录已原生安装 5 个技能，**junction 指向本技能
 3. 可选依赖：Pandoc（DOCX 输出）、tectonic（PDF 编译）、联网（Semantic Scholar 核验）；纯 Markdown 产出零依赖。
 4. 长文/批量任务先写文件再执行，成品读回验证。
 
-## 参考分工总表（本技能八份副本）
+## 参考分工总表（本技能九份副本）
 
 | 场景 | 用哪套 |
 |---|---|
@@ -72,12 +72,13 @@ Claude Code 技能目录已原生安装 5 个技能，**junction 指向本技能
 | 从代码库与实验证据起草 ML 论文、投稿前自查、Obsidian 文献知识库、写作模式挖掘 | Claude-Scholar（ml-paper-writing/paper-self-review/citation-verification/obsidian-*） |
 | 生/化/医/药/材学科分析（scanpy/rdkit/diffdock…）、1100 万篇全文虚拟文件系统、基金申请、LaTeX/PPTX 海报 | Scientific-Agent-Skills（先查其 docs/skills.md 索引） |
 | AI/ML 实验工程：训练/推理/评测/MLOps、idea→paper 自主研究 | AI-Research-SKILLs（0-autoresearch-skill 起按编号） |
+| 新手从零写完一篇论文/学位论文：头脑风暴→章节规划→逐章写作→质量门控→LaTeX（人文/法学/医学有专属规范） | Research-Writing-Skill（入口 research-writing-assistant，19 模块） |
 | CS 顶会技术类/Benchmark 论文 | 先 Supervisor-Skills 的 tech/benchmark 模板锁骨架，需要时再进 ARS 流程 |
 | 公共纪律一致：绝不编造引用与数据（各套各有细化）、零占位符、声明强度不超过证据强度 | 任选其一都成立 |
 
-**平台交付形态**：junction 原生安装的——Claude Code：ARS 5 + CCAS 3 + Nature 全部；Codex：academic-research-suite + CCAS 3 + Nature 全部。其余（Claude-Scholar、Scientific-Agent-Skills、AI-Research-SKILLs）读本技能副本，安装方式见各自指南。分工逻辑与平台无关，按上表选内容、按平台选入口。
+**平台交付形态**：junction 原生安装的——Claude Code：ARS 5 + CCAS 3 + Nature 全部 + RWS 入口；Codex：academic-research-suite + CCAS 3 + Nature 全部 + RWS 入口。其余（Claude-Scholar、Scientific-Agent-Skills、AI-Research-SKILLs）读本技能副本，安装方式见各自指南。分工逻辑与平台无关，按上表选内容、按平台选入口。
 
-各套细节与联动链见 [[supervisor-skills]]、[[codex-claude-academic-skills]]、[[nature-skills]]、[[claude-scholar]]、[[scientific-agent-skills]]、[[ai-research-skills]]。
+各套细节与联动链见 [[supervisor-skills]]、[[codex-claude-academic-skills]]、[[nature-skills]]、[[claude-scholar]]、[[scientific-agent-skills]]、[[ai-research-skills]]、[[research-writing-skill]]。
 
 ## 更新方法
 

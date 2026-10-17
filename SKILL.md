@@ -1,12 +1,12 @@
 ---
 name: paper-writing-hub
-description: 学术论文写作总路由（paper-writing-hub）：聚合 8 个开源学术技能项目（Supervisor-Skills 博导方法论、ARS 学术流水线及其 Codex 版、CCAS 中文写作+学术Office+科研计算、Nature-Skills、Claude-Scholar、Scientific-Agent-Skills 177 学科技能、AI-Research-SKILLs），按任务场景路由到对应技能集，并在 Claude Code / Codex 原生暴露精选技能。用于写论文（write paper / 论文 / academic paper）、润色（polish / 润色 / 中译英）、Introduction、审稿回复（rebuttal / review response）、文献综述（literature review / 系统综述）、引用核验（citation check）、模拟评审（peer review）、答辩 PPT、科研作图、基金申请等任务。
+description: 学术论文写作总路由（paper-writing-hub）：聚合 9 个开源学术技能项目（Supervisor-Skills 博导方法论、ARS 学术流水线及其 Codex 版、CCAS 中文写作+学术Office+科研计算、Nature-Skills、Claude-Scholar、Scientific-Agent-Skills 177 学科技能、AI-Research-SKILLs、Research-Writing-Skill 新手全流程），按任务场景路由到对应技能集，并在 Claude Code / Codex 原生暴露精选技能。用于写论文（write paper / 论文 / academic paper）、润色（polish / 润色 / 中译英）、Introduction、审稿回复（rebuttal / review response）、文献综述（literature review / 系统综述）、引用核验（citation check）、模拟评审（peer review）、答辩 PPT、科研作图、基金申请等任务。
 license: MIT
 ---
 
 # paper-writing-hub — 学术论文写作总路由
 
-一个 skill 聚合 **8 个开源学术技能项目**：统一安装（`npx paper-writing-hub`）、统一路由（按任务选技能集）、统一原生暴露（Claude Code 31 个 / Codex 27 个 junction 技能）。适合任何能读文件 + 跑 shell 的 coding agent（Claude Code、Codex、ZCode、Cursor、DSH 等）。
+一个 skill 聚合 **9 个开源学术技能项目**：统一安装（`npx paper-writing-hub`）、统一路由（按任务选技能集）、统一原生暴露（Claude Code 32 个 / Codex 28 个 junction 技能）。适合任何能读文件 + 跑 shell 的 coding agent（Claude Code、Codex、ZCode、Cursor、DSH 等）。
 
 路径约定：`<skill>` = 本 SKILL.md 所在目录（默认 `~/.agents/skills/paper-writing-hub`）；8 份上游副本在 `<skill>/references/<副本名>/`（由安装器克隆，全量工作树、不裁剪；仓库/包内同位置是**占位链接页**——一个指向上游仓库的 README，安装器会自动替换为全量副本）。
 
@@ -34,12 +34,13 @@ npx paper-writing-hub --remove --purge     # 卸载
 | Claude-Scholar | 科研全流程 45 技能：ML 论文起草/引用核查/投稿自查/Obsidian 知识库 | MIT | `references/claude-scholar.md` |
 | Scientific-Agent-Skills | 学科纵深：177 技能+100 科学数据库（生/化/医/药/材） | MIT（个别技能另声明） | `references/scientific-agent-skills.md` |
 | AI-Research-SKILLs | AI/ML 研究工程 30+ 技能：训练/推理/评测/MLOps | MIT | `references/ai-research-skills.md` |
+| Research-Writing-Skill（RWS v3.1.0） | 新手全流程写作系统 19 模块：头脑风暴→逐章写作→质量门控→LaTeX | MIT | `references/research-writing-skill.md` |
 
 ## 用法（路由规则）
 
-1. **原生安装平台**：若当前 harness 是 **Claude Code**——ARS 五技能（academic-paper / academic-paper-reviewer / academic-pipeline / deep-research / sr-screener）、CCAS 三技能、Nature-Skills 全部 23 个已原生装在 `~/.claude/skills/`；**Codex**——academic-research-suite、CCAS 三技能、Nature-Skills 全部在 `~/.codex/skills/`（均由安装器建 junction/symlink 指向 `<skill>/references/` 内副本）。原生技能直接按各自 SKILL.md 触发执行。
+1. **原生安装平台**：若当前 harness 是 **Claude Code**——ARS 五技能（academic-paper / academic-paper-reviewer / academic-pipeline / deep-research / sr-screener）、CCAS 三技能、Nature-Skills 全部 23 个、RWS 入口（research-writing-assistant）已原生装在 `~/.claude/skills/`；**Codex**——academic-research-suite、CCAS 三技能、Nature-Skills 全部、RWS 入口（research-writing-assistant）在 `~/.codex/skills/`（均由安装器建 junction/symlink 指向 `<skill>/references/` 内副本）。原生技能直接按各自 SKILL.md 触发执行。
 2. **参考路由**（未 junction 的套件与其他 agent）：读 `references/academic-research-skills.md` 末尾「参考分工总表」选通道 → 读该套指南速查表 → 读对应 SKILL.md 按其规范执行。
-3. **公共写作纪律**（八套一致，必须遵守）：事实性声明只来自用户材料/当次核验检索/领域常识，**绝不编造引用与数据**，产出**零占位符**，声明强度不超过证据强度。
+3. **公共写作纪律**（九套一致，必须遵守）：事实性声明只来自用户材料/当次核验检索/领域常识，**绝不编造引用与数据**，产出**零占位符**，声明强度不超过证据强度。
 
 ## 文档
 

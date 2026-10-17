@@ -35,6 +35,7 @@ const SOURCES = {
   'Claude-Scholar': 'https://github.com/Galaxy-Dawn/claude-scholar.git',
   'Scientific-Agent-Skills': 'https://github.com/k-dense-ai/scientific-agent-skills.git',
   'AI-Research-SKILLs': 'https://github.com/Orchestra-Research/AI-Research-SKILLs.git',
+  'Research-Writing-Skill': 'https://github.com/norman-bury/research-writing-skill.git',
 };
 
 const ALIASES = {
@@ -46,6 +47,7 @@ const ALIASES = {
   scholar: 'Claude-Scholar',
   sas: 'Scientific-Agent-Skills', scientific: 'Scientific-Agent-Skills',
   airs: 'AI-Research-SKILLs', ai: 'AI-Research-SKILLs',
+  rws: 'Research-Writing-Skill',
 };
 
 const SKILL_FILES = ['SKILL.md', 'README.md', 'README_ALL.md', 'LICENSE', 'THIRD_PARTY_NOTICES.md'];
@@ -56,13 +58,15 @@ function claudeLinks() {
     .map((n) => [n, ['Academic-Research-Skills', n]]);
   const ccas = ['research-writing-skill', 'office-academic-skill', 'scientific-toolkit-skill']
     .map((n) => [n, ['Codex-Claude-Academic-Skills', n]]);
-  return [...ars, ...ccas, ...natureLinks()];
+  const rws = [['research-writing-assistant', ['Research-Writing-Skill', '.']]];
+  return [...ars, ...ccas, ...rws, ...natureLinks()];
 }
 function codexLinks() {
   const suite = [['academic-research-suite', ['Academic-Research-Skills-Codex', 'skills/academic-research-suite']]];
   const ccas = ['research-writing-skill', 'office-academic-skill', 'scientific-toolkit-skill']
     .map((n) => [n, ['Codex-Claude-Academic-Skills', n]]);
-  return [...suite, ...ccas, ...natureLinks()];
+  const rws = [['research-writing-assistant', ['Research-Writing-Skill', '.']]];
+  return [...suite, ...ccas, ...rws, ...natureLinks()];
 }
 function natureLinks() {
   const root = path.join(target, 'references', 'Nature-Skills', 'skills');

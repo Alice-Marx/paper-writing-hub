@@ -16,6 +16,7 @@ declare -A SOURCES=(
   [Claude-Scholar]="https://github.com/Galaxy-Dawn/claude-scholar.git"
   [Scientific-Agent-Skills]="https://github.com/k-dense-ai/scientific-agent-skills.git"
   [AI-Research-SKILLs]="https://github.com/Orchestra-Research/AI-Research-SKILLs.git"
+  [Research-Writing-Skill]="https://github.com/norman-bury/research-writing-skill.git"
 )
 
 mkdir -p "$TARGET/references"
@@ -46,6 +47,8 @@ for s in academic-paper academic-paper-reviewer academic-pipeline deep-research 
   link "$HOME/.claude/skills" "$s" "$TARGET/references/Academic-Research-Skills/$s"
 done
 link "$HOME/.codex/skills" academic-research-suite "$TARGET/references/Academic-Research-Skills-Codex/skills/academic-research-suite"
+link "$HOME/.claude/skills" research-writing-assistant "$TARGET/references/Research-Writing-Skill"
+link "$HOME/.codex/skills" research-writing-assistant "$TARGET/references/Research-Writing-Skill"
 if [ -d "$TARGET/references/Nature-Skills/skills" ]; then
   for d in "$TARGET"/references/Nature-Skills/skills/*/; do
     n="$(basename "$d")"

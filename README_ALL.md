@@ -1,6 +1,6 @@
 # paper-writing-hub — 学术论文写作技能总览（README_ALL）
 
-> 学术写作与科研参考库：8 份上游开源项目的**全量离线副本**（仅排除 .git，不裁剪任何内容），
+> 学术写作与科研参考库：9 份上游开源项目的**全量离线副本**（仅排除 .git，不裁剪任何内容），
 > 集中存放在本技能安装目录 `references\` 下，任何能读文件+跑 shell 的 coding agent 都可用。
 > 上游副本由安装器（`npx paper-writing-hub`）从各官方仓库克隆，随上游保持最新。
 
@@ -20,7 +20,8 @@ paper-writing-hub\
     ├── nature-skills.md                    │
     ├── claude-scholar.md                   │
     ├── scientific-agent-skills.md          │
-    ├── ai-research-skills.md               ┘
+    ├── ai-research-skills.md               │
+    └── research-writing-skill.md           ┘
     ├── Supervisor-Skills\                  ┐
     ├── Academic-Research-Skills\           │
     ├── Academic-Research-Skills-Codex\     │ 8 份全量副本
@@ -28,7 +29,8 @@ paper-writing-hub\
     ├── Nature-Skills\                      │
     ├── Claude-Scholar\                     │
     ├── Scientific-Agent-Skills\            │
-    └── AI-Research-SKILLs\                 ┘
+    ├── AI-Research-SKILLs\                 │
+    └── Research-Writing-Skill\             ┘
 ```
 
 ---
@@ -100,6 +102,14 @@ paper-writing-hub\
 - **什么时候用**：论文的实验怎么跑、怎么评、怎么加速——写作用前几套，实验工程用这套。
 - **指南**：`references/ai-research-skills.md`
 
+### 9. Research-Writing-Skill（RWS）— 新手全流程写作系统
+
+- **来源**：<https://github.com/norman-bury/research-writing-skill>（科研写作助手，工程化写作协作系统）
+- **版本**：v3.1.0（上游 2026-05-10 发布）｜12MB / 77 文件｜**MIT**
+- **是什么**：面向本科/研究生/科研新手的**项目级写作流水线**：头脑风暴 → 章节规划 → 逐章写作 → 质量门控 → LaTeX 输出，状态可追踪可恢复。`skills/` 19 个模块（brainstorming-research、paper-orchestration、writing-chapters、evidence-driven-writing、literature-review、statistical-analysis、figures-python、latex-output、peer-review，人文/法学/医学专属写作规范等）；入口技能名 `research-writing-assistant`。与 CCAS 里的同名技能**不同源**。默认产出 Markdown/LaTeX，不编造文献。
+- **什么时候用**：从零开始被引导着写完一篇论文/学位论文（尤其新手）。
+- **指南**：`references/research-writing-skill.md`
+
 ---
 
 ## 场景 → 用哪套（速查）
@@ -115,6 +125,7 @@ paper-writing-hub\
 | 从代码库起草 ML 论文、投稿前自查、Obsidian 文献知识库 | Claude-Scholar |
 | 生/化/医/药/材学科分析、1100 万篇全文检索、基金申请、学术海报 | Scientific-Agent-Skills |
 | AI/ML 实验工程：训练/推理/评测/MLOps、idea→paper | AI-Research-SKILLs |
+| 新手从零写完一篇论文/学位论文：头脑风暴→章节规划→逐章写作→质量门控→LaTeX | Research-Writing-Skill（research-writing-assistant） |
 | CS 顶会技术类/Benchmark 论文 | 先 Supervisor-Skills 模板锁骨架，需要时再进 ARS 流程 |
 
 完整分工表与平台交付说明见 `references/academic-research-skills.md` 末尾「参考分工总表」。
@@ -123,8 +134,8 @@ paper-writing-hub\
 
 | 平台 | 原生可用技能 | 说明 |
 |---|---|---|
-| Claude Code（`~/.claude/skills/`） | ARS 5 技能 + CCAS 3 技能 + nature 23 个 = 31 个 | 直接触发；ARS 要 `/ars-*` 命令与 hooks 需另装插件版 |
-| Codex（`~/.codex/skills/`） | academic-research-suite + CCAS 3 技能 + nature 23 个 = 27 个 | `$academic-research-suite` 调用 |
+| Claude Code（`~/.claude/skills/`） | ARS 5 技能 + CCAS 3 技能 + nature 23 个 + RWS 入口 = 32 个 | 直接触发；ARS 要 `/ars-*` 命令与 hooks 需另装插件版 |
+| Codex（`~/.codex/skills/`） | academic-research-suite + CCAS 3 技能 + nature 23 个 + RWS 入口 = 28 个 | `$academic-research-suite` 调用 |
 | 其他 agent（ZCode/DSH/Cursor 等） | 读本技能副本按指南路由 | Supervisor-Skills、Claude-Scholar、Scientific-Agent-Skills、AI-Research-SKILLs 各平台均走参考路由（原因与按需安装方式见各自指南） |
 
 ## 公共写作纪律（八套一致）

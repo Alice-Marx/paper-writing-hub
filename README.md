@@ -1,6 +1,6 @@
 # paper-writing-hub
 
-**一个命令装齐 8 个开源学术技能项目，写论文从选题到 rebuttal 全流程覆盖。** 统一路由、统一安装，并在 Claude Code / Codex 里原生暴露 30+ 个技能（junction/symlink 指向本地副本，零重复占用）。
+**一个命令装齐 9 个开源学术技能项目，写论文从选题到 rebuttal 全流程覆盖。** 统一路由、统一安装，并在 Claude Code / Codex 里原生暴露 30+ 个技能（junction/symlink 指向本地副本，零重复占用）。
 
 > One command installs 8 open-source academic skill collections (paper writing, polishing,
 > peer review, rebuttal, literature review, citation verification, thesis PPT, scientific
@@ -18,6 +18,7 @@
 | [claude-scholar](https://github.com/Galaxy-Dawn/claude-scholar) | 科研全流程 45 技能：ML 论文起草、引用核查、投稿自查、Obsidian 文献知识库 | MIT |
 | [scientific-agent-skills](https://github.com/k-dense-ai/scientific-agent-skills)（K-Dense） | 177 个学科技能 + 100+ 科学数据库（生/化/医/药/材），1100 万篇全文论文虚拟文件系统 | MIT |
 | [AI-Research-SKILLs](https://github.com/Orchestra-Research/AI-Research-SKILLs) | AI/ML 研究工程 30+ 技能：训练/推理/评测/MLOps，idea→paper 的实验半边 | MIT |
+| [research-writing-skill](https://github.com/norman-bury/research-writing-skill) | 新手全流程写作系统 19 模块：头脑风暴→章节规划→逐章写作→质量门控→LaTeX | MIT |
 
 按场景怎么选（写 Intro / 系统综述 / 答辩 PPT / Nature 润色 / 学科分析……）见 [README_ALL.md](README_ALL.md) 的「场景 → 用哪套」速查表。
 
@@ -41,8 +42,8 @@ npx paper-writing-hub
 1. 把本技能（SKILL.md + 8 份使用指南 + README_ALL）安装到 `~/.agents/skills/paper-writing-hub/`
 2. 浅克隆（`--depth 1`）8 个上游项目到该目录 `references/` 下
 3. 在 Claude Code（`~/.claude/skills/`）和 Codex（`~/.codex/skills/`）技能目录创建 junction（Windows）/ symlink（macOS/Linux），原生暴露：
-   - **Claude Code 31 个**：ARS 5（academic-paper、academic-paper-reviewer、academic-pipeline、deep-research、sr-screener）+ CCAS 3（research-writing-skill、office-academic-skill、scientific-toolkit-skill）+ Nature 23（nature-*）
-   - **Codex 27 个**：academic-research-suite + CCAS 3 + Nature 23
+   - **Claude Code 32 个**：ARS 5（academic-paper、academic-paper-reviewer、academic-pipeline、deep-research、sr-screener）+ CCAS 3（research-writing-skill、office-academic-skill、scientific-toolkit-skill）+ Nature 23（nature-*）+ RWS（research-writing-assistant）
+   - **Codex 28 个**：academic-research-suite + CCAS 3 + Nature 23 + RWS（research-writing-assistant）
 
 ### 方式二：npm 全局安装
 
@@ -51,7 +52,7 @@ npm install -g paper-writing-hub
 paper-writing-hub            # 同 npx，参数一致
 ```
 
-> 说明：仓库与 npm 包的 `references/` 下，8 个技能目录是**占位链接页**（各含一个指向上游仓库的 README）。运行安装器后，这些目录会被替换为对应上游项目的全量副本。
+> 说明：仓库与 npm 包的 `references/` 下，9 个技能目录是**占位链接页**（各含一个指向上游仓库的 README）。运行安装器后，这些目录会被替换为对应上游项目的全量副本。
 
 ### 方式三：git clone
 
@@ -67,7 +68,7 @@ bash paper-writing-hub/scripts/install.sh
 | 选项 | 说明 |
 |---|---|
 | `--target <dir>` | 自定义安装目录（默认 `~/.agents/skills/paper-writing-hub`） |
-| `--select a,b,...` | 只装部分上游。可用全名或别名：`ss`(Supervisor-Skills) `ars` `arsc`(ARS-Codex) `ccas` `nature` `scholar` `sas`(Scientific-Agent-Skills) `airs`(AI-Research-SKILLs) |
+| `--select a,b,...` | 只装部分上游。可用全名或别名：`ss`(Supervisor-Skills) `ars` `arsc`(ARS-Codex) `ccas` `nature` `scholar` `sas`(Scientific-Agent-Skills) `airs`(AI-Research-SKILLs) `rws`(Research-Writing-Skill) |
 | `--no-upstreams` | 只装技能文件，不克隆上游（体积 KB 级） |
 | `--no-links` | 不创建 Claude Code / Codex 原生链接 |
 | `--proxy <url>` | git 克隆走指定代理（如 `http://127.0.0.1:7890`） |

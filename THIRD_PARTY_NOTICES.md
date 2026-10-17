@@ -15,6 +15,7 @@ copy under that project's own license. This file records attribution as required
 | claude-scholar | https://github.com/Galaxy-Dawn/claude-scholar | MIT (obsidian-* skills carry their own upstream license files) | |
 | scientific-agent-skills | https://github.com/k-dense-ai/scientific-agent-skills | MIT at repo level; individual skills may declare their own license in SKILL.md | Check per-skill before commercial use |
 | AI-Research-SKILLs | https://github.com/Orchestra-Research/AI-Research-SKILLs | MIT | Originally under zechenzhangAGI, migrated to the Orchestra-Research org |
+| research-writing-skill | https://github.com/norman-bury/research-writing-skill | MIT | Unrelated to the same-named skill inside CCAS |
 
 The guide documents in `references/*.md` and `README_ALL.md` are original
 descriptions/summaries of these projects written for this hub, provided under the
