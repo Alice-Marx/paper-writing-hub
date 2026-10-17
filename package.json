@@ -1,0 +1,39 @@
+{
+  "name": "paper-writing-hub",
+  "version": "1.0.0",
+  "description": "One command installs 8 open-source academic paper-writing skill collections and exposes selected skills natively to Claude Code & Codex (writing, polishing, peer review, rebuttal, literature review, citation verification, thesis PPT, scientific computing).",
+  "type": "module",
+  "bin": {
+    "paper-writing-hub": "scripts/install.mjs"
+  },
+  "files": [
+    "SKILL.md",
+    "README.md",
+    "README_ALL.md",
+    "LICENSE",
+    "THIRD_PARTY_NOTICES.md",
+    "references/",
+    "scripts/"
+  ],
+  "keywords": [
+    "claude-code",
+    "codex",
+    "agent-skills",
+    "skills",
+    "academic-writing",
+    "paper-writing",
+    "research",
+    "rebuttal",
+    "literature-review",
+    "peer-review",
+    "chinese"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alice-Marx/paper-writing-hub.git"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

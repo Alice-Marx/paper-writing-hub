@@ -1,0 +1,11 @@
+node_modules/
+tmp/
+*.log
+references/Supervisor-Skills/
+references/Academic-Research-Skills/
+references/Academic-Research-Skills-Codex/
+references/Codex-Claude-Academic-Skills/
+references/Nature-Skills/
+references/Claude-Scholar/
+references/Scientific-Agent-Skills/
+references/AI-Research-SKILLs/
