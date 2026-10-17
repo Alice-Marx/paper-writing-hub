@@ -75,6 +75,8 @@ function natureLinks() {
 let target = path.join(HOME, '.agents', 'skills', 'paper-writing-hub');
 let select = null, noUpstreams = false, noLinks = false, remove = false, purge = false, proxy = null;
 
+const USAGE = 'npx paper-writing-hub [--target <dir>] [--select a,b] [--no-upstreams] [--no-links] [--proxy <url>] [--remove [--purge]]';
+
 const argv = process.argv.slice(2);
 for (let i = 0; i < argv.length; i++) {
   const a = argv[i];
@@ -88,8 +90,6 @@ for (let i = 0; i < argv.length; i++) {
   else if (a === '-h' || a === '--help') { console.log(USAGE); process.exit(0); }
   else { console.error(`unknown option: ${a}\n\n${USAGE}`); process.exit(1); }
 }
-
-const USAGE = 'npx paper-writing-hub [--target <dir>] [--select a,b] [--no-upstreams] [--no-links] [--proxy <url>] [--remove [--purge]]';
 
 const log = (msg) => console.log(msg);
 const die = (msg) => { console.error(`ERROR: ${msg}`); process.exit(1); };
